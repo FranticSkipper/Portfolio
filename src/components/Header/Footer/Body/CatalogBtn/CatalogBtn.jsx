@@ -41,7 +41,7 @@ const CatalogBtn = (props) => {
 
     return (
         <Div>
-            <Button onClick={ props.buttonClick }>
+            <Button onClick={ props.showModal }>
                 <ButtonDiv>
                     {props.isActive ? <MenuUnfoldOutlined style={ BtnIconStyle }/> : <MenuFoldOutlined style={ BtnIconStyle }/>}
                     <Text> Каталог </Text>

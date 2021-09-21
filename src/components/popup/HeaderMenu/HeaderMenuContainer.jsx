@@ -1,11 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import Catalog from './Catalog'
+import HeaderMenu from './HeaderMenu'
 
-
-const CatalogContainer = (props) => {
+const HeaderMenuContainer = (props) => {
     return (
-        <Catalog {...props}/>
+        <HeaderMenu {...props}/>
     )
 }
 
@@ -15,4 +14,4 @@ const mapStateToProps = (state) => {
         menu: state.header.footer.menu
     }
 }
-export default connect(mapStateToProps, {})(CatalogContainer)
+export default connect(mapStateToProps, {})(HeaderMenuContainer)

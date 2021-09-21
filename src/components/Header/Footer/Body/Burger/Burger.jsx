@@ -41,8 +41,11 @@ const Div = styled.div`
 `
 
 const Burger = (props) => {
+
+
+
     return (
-        <Div onClick={props.buttonClick}>
+        <Div onClick={props.showModal}>
             <span></span>
         </Div>
     )

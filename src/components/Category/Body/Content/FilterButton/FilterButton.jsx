@@ -40,13 +40,9 @@ const Button = styled.button`
 
 const FilterButton = (props) => {
     
-    const buttonClick = (e) => {
-        props.setIsFilterActive(true)
-    }
-    
     return(
         <Div>
-            <Button onClick={buttonClick} filterIcon={filterIcon}>
+            <Button onClick={props.showModal} filterIcon={filterIcon}>
                 Фильтр
             </Button>
         </Div>

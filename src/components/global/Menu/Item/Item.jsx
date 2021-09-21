@@ -14,13 +14,13 @@ const Li = styled.li`
     }
     @media(max-width: 991px){
         flex: 0 1 25%;
-        padding: 0;
     }
     @media(max-width: 792px){
         flex: 0 1 33.33%;
     }
     @media(max-width: 525px){
         flex: 0 1 50%;
+        padding: 0;
     }
     a{
         display: flex;

@@ -1,7 +1,7 @@
 import { RightOutlined } from '@ant-design/icons';
 import React from 'react'
 import styled from 'styled-components'
-import { itemColorActive, itemColorUnactive } from '../../../../../../../functions';
+import { itemColorActive, itemColorUnactive } from '../../../../../functions';
 
 const Li = styled.li`
     :not(:last-child){

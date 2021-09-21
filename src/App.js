@@ -6,7 +6,6 @@ import styled, {createGlobalStyle} from "styled-components";
 
 import Home from './components/Home/Home'
 import Category from './components/Category/Category'
-import Card from './components/Card/Card'
 import News from './components/News/News'
 import About from './components/About/About'
 import Contacts from './components/Contacts/Contacts'
@@ -56,7 +55,6 @@ function App() {
           <Main className="main">
               <Route exact path="/" render={()=> <Home/>} />
               <Route path="/category" render={()=> <Category/>} />
-              <Route path="/card" render={()=> <Card/>} />
               <Route path="/news" render={()=> <News/>} />
               <Route path="/about" render={()=> <About/>} />
               <Route path="/contacts" render={()=> <Contacts/>} />

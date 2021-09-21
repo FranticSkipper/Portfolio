@@ -2,7 +2,10 @@ import { LeftOutlined } from '@ant-design/icons';
 import React from 'react'
 import styled from 'styled-components';
 
-
+const Div = styled.div`
+    width: 100%;
+    padding-top: 30px;
+`  
 const Button = styled.div`
     background: #F9F9F9;
     width: 100%;
@@ -26,10 +29,12 @@ const imgStyle = { color: 'inherit', fontSize: '12px'}
 const CloseButton = (props) => {
 
     return (
-        <Button onClick={ () => {props.setIsSideActive(false)}}>
-            <LeftOutlined  style={imgStyle} />
-            Назад
-        </Button>
+        <Div>
+            <Button onClick={ () => {props.setIsSideActive(false)}}>
+                <LeftOutlined  style={imgStyle} />
+                Назад
+            </Button>
+        </Div>
     )
 }
 

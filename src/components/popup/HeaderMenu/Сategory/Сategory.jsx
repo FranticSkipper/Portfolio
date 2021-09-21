@@ -1,9 +1,9 @@
 import Item from './Item/Item';
 import React from 'react'
 import styled from 'styled-components'
-import FormFieldContainer from '../../../Body/FormField/FormFieldContainer';
-import useWindowDimensions from '../../../../../../hooks/useWindowDimensions';
-import MenuContainer from '../../../../Top/Body/Menu/MenuContainer';
+import FormFieldContainer from '../../../Header/Footer/Body/FormField/FormFieldContainer';
+import useWindowDimensions from '../../../../hooks/useWindowDimensions';
+import MenuContainer from '../../../Header/Top/Body/Menu/MenuContainer';
 
 const Div = styled.div`
     background: #F9F9F9;
@@ -12,6 +12,9 @@ const Div = styled.div`
     @media(max-width: 998px){
         padding: 36px 10px 38px;
         flex: 0 0 300px;
+    }
+    @media (max-width: 768px) {
+        flex: 1 1 100%;
     }
     @media(max-width: 525px){
         flex: 1 1 auto;

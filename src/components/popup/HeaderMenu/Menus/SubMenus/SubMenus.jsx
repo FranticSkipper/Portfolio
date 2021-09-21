@@ -4,12 +4,13 @@ import styled from 'styled-components'
 
 const Div = styled.div`
     width: 180px;
+    
 `
 const Title = styled.div`
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 16px;
 
     color: #333333;
     margin-bottom: 12px;

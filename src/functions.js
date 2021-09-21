@@ -20,7 +20,7 @@ export const paginate =(list, currentPage, pageSize) => {
     return list.slice( (currentPage - 1 ) * pageSize, currentPage * pageSize )
 }
 export const bodyLock = () => {
-    document.body.style.overflowX = 'hidden';
+    document.body.style.overflow = 'hidden';
 }
 export const bodyUnlock = () => {
     document.body.style.overflow = 'visible';

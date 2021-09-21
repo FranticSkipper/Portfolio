@@ -7,8 +7,8 @@ import CartContainer from './Cart/CartContainer'
 import Burger from './Burger/Burger'
 import FormFieldContainer from './FormField/FormFieldContainer'
 import useWindowDimensions from '../../../../hooks/useWindowDimensions'
-import CatalogContainer from './Catalog/CatalogContainer'
-import { bodyLock, bodyUnlock } from '../../../../functions'
+import { Modal } from 'antd';
+import HeaderMenuContainer from '../../../popup/HeaderMenu/HeaderMenuContainer'
 
 const Div = styled.div`
     max-width: 1470px;
@@ -22,28 +22,31 @@ const Div = styled.div`
 `
 
 const Body = (props) => {
-    
-    const [isActive, setIsActive] = useState(false)
-    if(isActive)
-        bodyLock()
-    else
-        bodyUnlock()
-    
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
     const {width } = useWindowDimensions();
-    const  buttonClick = () => {
-        let icon = isActive ? false : true;
-        setIsActive(icon)
-    };
+    const showModal = () => {
+        setIsModalOpen(true);
+      };
+    
+      const handleOk = () => {
+        setIsModalOpen(false);
+      };
+    
+      const handleCancel = () => {
+        setIsModalOpen(false);
+      };
     return (
         <Div>
-            <Logo/>   
-            <CatalogBtn isActive={isActive} buttonClick={buttonClick}/>
+            <Logo/>  
+            <CatalogBtn showModal={showModal}/>
             {width > 991 ? <FormFieldContainer/> : null}
             <PhoneCall/>
             <CartContainer/>
-            <Burger isActive={isActive} buttonClick={buttonClick}/>
-            <CatalogContainer isActive={isActive}/>
-            
+            <Burger showModal={showModal}/>
+            <Modal bodyStyle={{padding: '0'}} getContainer={false} width={width <= 991 ? '100%' : 1470} footer={false} visible={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                <HeaderMenuContainer/>
+            </Modal>
         </Div>
     )
 }

@@ -7,7 +7,7 @@ import Selected from './Selected/Selected'
 import { Form, Field } from "react-final-form";
 import ListItems from './ListItems/ListItems';
 import CostContainer from './Cost/CostContainer';
-import buttonClose from '../../../../../assets/global/close.svg';
+
 const { Panel } = Collapse;
 
 const CategoryForm = styled.form`
@@ -61,29 +61,11 @@ const Submit = styled.button`
     margin-top: 15px;
     margin-left: 15px;
 `
-const ButtonClose = styled.button`
-   position: absolute;
-   top: 19px;
-   right: 16px;
-   width: 15px;
-   height: 15px;
-   background: url(${buttonClose}) no-repeat 0 0/contain;
-
-   border: none;
-   display: none;
-   @media(max-width: 768px){
-       display: block;
-   }
-`
 
 const FormSide = (props) => {
     const onSubmit = async (values) => {
       
     };
-    const closeFilter = (e) => {
-        e.preventDefault()
-        props.setIsFilterActive(false)
-    }
     
     return(
         <Form
@@ -164,7 +146,6 @@ const FormSide = (props) => {
                     </Panel>
                 </Collapse>
                 <Submit type='submit'>Показать</Submit>
-                <ButtonClose onClick={closeFilter}></ButtonClose>
             </CategoryForm>
             )}
          /> 

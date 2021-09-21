@@ -132,6 +132,36 @@ const initialState = {
                     },
                     {
                         id: '2',
+                        title: 'По цвету',
+                        values: [{
+                                id: '1',
+                                name: 'Красные',
+                                value: '/category'
+                            },
+                            {
+                                id: '2',
+                                name: 'Зеленые',
+                                value: '/category'
+                            },
+                            {
+                                id: '3',
+                                name: 'Белые',
+                                value: '/category'
+                            },
+                            {
+                                id: '4',
+                                name: 'Оранжевые',
+                                value: '/category'
+                            },
+                            {
+                                id: '5',
+                                name: 'Синие',
+                                value: '/category'
+                            }
+                        ]
+                    },
+                    {
+                        id: '3',
                         title: 'По диаметру колеса',
                         values: [{
                                 id: '1',
@@ -170,36 +200,7 @@ const initialState = {
                             }
                         ]
                     },
-                    {
-                        id: '3',
-                        title: 'По цвету',
-                        values: [{
-                                id: '1',
-                                name: 'Красные',
-                                value: '/category'
-                            },
-                            {
-                                id: '2',
-                                name: 'Зеленые',
-                                value: '/category'
-                            },
-                            {
-                                id: '3',
-                                name: 'Белые',
-                                value: '/category'
-                            },
-                            {
-                                id: '4',
-                                name: 'Оранжевые',
-                                value: '/category'
-                            },
-                            {
-                                id: '5',
-                                name: 'Синие',
-                                value: '/category'
-                            }
-                        ]
-                    },
+                    
                     {
                         id: '4',
                         title: 'По материалу рамы',

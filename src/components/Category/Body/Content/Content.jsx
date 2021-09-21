@@ -27,7 +27,7 @@ const Content = (props) => {
             <MenuContainer/>
             <Row/>  
             <Sort/>
-            <FilterButton setIsFilterActive={props.setIsFilterActive}/>
+            <FilterButton showModal={props.showModal}/>
             <Products currentPage={currentPage} goods={props.goods} itemsPageSize={props.goodsPerPage}/>
             <Paggination setCurrentPage={setCurrentPage} itemsAmount={props.goodsAmount} itemsPageSize={props.goodsPerPage}/>
         </Div>

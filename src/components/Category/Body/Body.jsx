@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { bodyLock, bodyUnlock } from '../../../functions'
+import useWindowDimensions from '../../../hooks/useWindowDimensions'
 import ContentContainer from './Content/ContentContainer'
 import Filters from './Filters/Filters'
+import { Modal } from 'antd';
 
 const Div = styled.div`
     display: flex;
@@ -11,18 +12,30 @@ const Div = styled.div`
 
 const Body = (props) => {
     const [isFilterActive, setIsFilterActive] = useState(false)
-    useEffect(() => {
-        if(isFilterActive){
-            bodyLock()
-        }
-        else{
-            bodyUnlock()
-        }
-    })
+    const { width } = useWindowDimensions();
+
+    const showModal = () => {
+        setIsFilterActive(true);
+      };
+    
+      const handleOk = () => {
+        setIsFilterActive(false);
+      };
+    
+      const handleCancel = () => {
+        setIsFilterActive(false);
+      };
     return(
         <Div>
-            <Filters setIsFilterActive={setIsFilterActive} isFilterActive={isFilterActive}/>
-            <ContentContainer setIsFilterActive={setIsFilterActive}/>
+            {
+                width > 768 ? 
+                <Filters isFilterActive={isFilterActive}/>:
+                <Modal style={{top: '0'}} bodyStyle={{padding: '0'}} getContainer={false} width={'100%'} visible={isFilterActive} onOk={handleOk} onCancel={handleCancel}>
+                    <Filters setIsFilterActive={setIsFilterActive} isFilterActive={isFilterActive}/>
+                </Modal>
+            }
+            
+            <ContentContainer showModal={showModal}/>
         </Div>
     )
 }

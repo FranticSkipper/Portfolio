@@ -11,16 +11,8 @@ const Div = styled.div`
         flex: 0 0 300px;
     }
     @media(max-width: 768px){
-        position: fixed;
-        overflow-y: scroll;
-        width: 100%;
-        opacity: ${props => props.isFilterActive ? '1' : '0'};
-        visibility: ${props => props.isFilterActive ? 'visible' : 'hidden'};
-        
-        top: 0;
-        left: ${props => props.isFilterActive ? '0' : '-100%'};
-        height: 100%;
-        z-index: 150;
+        flex: 1 1 auto;
+        margin-right: 0;
     }
     
 `
